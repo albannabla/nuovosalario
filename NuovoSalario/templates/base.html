@@ -1,5 +1,4 @@
 {% load static %}
-{% load render_table from django_tables2 %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,10 +9,9 @@
 <body>
 	<div id="wrapper">
         <section id="main">
-        <table>
-            <title> List of Shop Ads </title>
-            {% render_table object_list %}      
-        </table>
+            {% block content %}
+            <p>Placeholder text in base template. Replace with page content.</p>
+            {% endblock content %}    
 		</section>
 		<footer id="footer">Copyright &copy;
             <script type="text/JavaScript">
