@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from .table import shopTable
+from django.views.generic import ListView
 from .models import Shop
 
-def index(request):
-    table = shopTable(Shop.objects.all())
-    return render(request, 'base.html', {'table': table})
+class ShopList(ListView):
+	model = Shop
+	template_name = 'base.html'
 
 
