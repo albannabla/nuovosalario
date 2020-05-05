@@ -6,6 +6,7 @@ from .script import purge
 class ShopList(ListView):
 	model = Shop
 	template_name = 'table.html'
+	ordering = ['id']
 
 def index(request):
 	purge()
