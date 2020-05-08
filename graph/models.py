@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import date
 
 class Shop(models.Model):
 	webid = models.CharField(max_length=30)
@@ -7,4 +8,5 @@ class Shop(models.Model):
 	description = models.CharField(max_length=100)
 	area = models.CharField(max_length=30)
 	pricepersqm = models.FloatField(max_length=30)
+	date = models.DateField(default=date.today)
 
