@@ -4,7 +4,7 @@
 import requests, os
 from bs4 import BeautifulSoup
 import pandas as pd
-import datetime
+from datetime import date
 from .models import Shop
 
 def scraper():
@@ -82,9 +82,10 @@ def scraper():
 	#print(test_df.info())
 
 	#save to database
+	today = date.today()
 	for i in range(len(test_df['id'])):
 	    #newinstance = Shop.objects.create(webid="test",link="test3",price="test",description="test",area="test",pricepersqm=0,date="2020-05-05")
-	    newinstance = Shop.objects.create(webid=str(test_df['id'][i]),link=str(test_df['link'][i]),price=str(test_df['price'][i]),description=str(test_df['description'][i]),area=str(test_df['area'][i]),pricepersqm=0,date="2020-05-05")
+	    newinstance = Shop.objects.create(webid=str(test_df['id'][i]),link=str(test_df['link'][i]),price=str(test_df['price'][i]),description=str(test_df['description'][i]),area=str(test_df['area'][i]),pricepersqm=0,date=today)
 	
 	return
 

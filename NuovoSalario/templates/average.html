@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+  
+{% block content %}
+<h1> {{ view.title }}</h1>
+<ul>
+	{% for shop in view.shops %}
+	<li> Date: 
+		{{ shop.date }}
+		Average: Eur
+		{{ shop.averageprice }} /sqm
+	</li>
+	{% endfor %}
+</ul>	
+{% endblock content %}
