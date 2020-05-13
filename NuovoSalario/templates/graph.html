@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+  
+{% block content %}
+
+<h1> Historical Average Price of Shops In Nuovo Salario</h1>
+{% if graph %}  
+<div id="graph">
+{{ graph|safe }}
+</div>
+{% endif %}
+
+{% endblock content %}

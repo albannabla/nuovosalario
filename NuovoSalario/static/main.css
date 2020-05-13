@@ -9,3 +9,7 @@
     list-style-position: inside;
     display: inline;
 }
+
+#graph {
+	width:90%;
+}
