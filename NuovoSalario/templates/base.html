@@ -8,24 +8,23 @@
 </head>
 <body>
 	<div id="wrapper">
+        <h1> Historical Advertised Prices Of Nuovo Salario (Rome, Italy) - Commercial Units (Shops)</h1>
         <section id="main">
             {% block content %}
             <p>Placeholder text in base template. Replace with page content.</p>
             {% endblock content %}    
 		</section>
-        <div>
-            <a href="/"> All Ads </a>
+        <div id="buttons">
+            <a href="/allads"> All Ads </a>
             |
             <a href="/average"> Averages by Date </a>
             | 
-            <a href="/graph"> Graph of Historical Prices</a>
+            <a href="/"> Graph of Historical Prices</a>
             |
             <a href="/update"> Update Ads</a>
         </div>
-		<footer id="footer">Copyright &copy;
-            <script type="text/JavaScript">
-                document.write(new Date().getFullYear());                    
-            </script> Programmasuka
+		<footer id="footer">All data was extracted and it is copyrighted by 
+            <a href="http://www.immobiliare.it">Immobiliare.it</a>
         </footer>
     </div>
 </body>

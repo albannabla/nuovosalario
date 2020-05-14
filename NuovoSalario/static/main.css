@@ -1,4 +1,33 @@
 @charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+
+body{
+	font-family: 'Open Sans', Sans Serif;
+	font-weight: 400;
+	color: #545454;
+	-webkit-font-smoothing: antialiased;
+}
+
+a{
+	text-decoration: none;
+	color: #d65814;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #a93c01;
+}
+
+a:hover,a:active,a:focus {
+	outline: 0;
+}
+
+#maintitle {
+	font-family: 'Open Sans', Sans Serif;
+	font-weight: 1000;
+	color: #545454;
+	-webkit-font-smoothing: antialiased;
+}
 
 .pagination {
     width: 80%;
