@@ -43,15 +43,14 @@ class Graph(TemplateView):
 			y.append(data[i]['averageprice'])
 			rownum.append(Shop.objects.filter(date=data[i]['date']).count()) 
 
-		trace1 = go.Scatter(x=x, y=y, marker={'color': 'red', 'symbol': 104},mode="lines",  name='1st Trace')
-		data=go.Data([trace1])
+		data=go.Scatter(x=x, y=y, marker={'color': 'red', 'symbol': 104},mode="lines",  name='1st Trace')
 		layout=go.Layout(title="Average Price Per Sqm", xaxis={'title':'date'}, yaxis={'title':'price per sqm (euro)'})
 		figure=go.Figure(data=data,layout=layout)
 		div = opy.plot(figure, auto_open=False, output_type='div')
 		context['graph'] = div
 		
 		data2 = go.Bar(x=x, y=rownum)
-		layout2=go.Layout(title="Number of Ads per Date", xaxis={'title':'date'}, yaxis={'title':'number of ads'})
+		layout2=go.Layout(title="Number of Ads per Date", xaxis={'title':'date'}, yaxis={'title':'number of ads', 'range': [0,20]})
 		figure2=go.Figure(data=data2,layout=layout2)
 		div2 = opy.plot(figure2, auto_open=False, output_type='div')
 		context['graph2'] = div2

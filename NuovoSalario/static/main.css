@@ -6,6 +6,7 @@ body{
 	font-weight: 400;
 	color: #545454;
 	-webkit-font-smoothing: antialiased;
+	text-align: center;
 }
 
 a{
@@ -29,8 +30,9 @@ a:hover,a:active,a:focus {
 	-webkit-font-smoothing: antialiased;
 }
 
-.pagination {
-    width: 80%;
+.table-container {
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .pagination li {
@@ -39,10 +41,3 @@ a:hover,a:active,a:focus {
     display: inline;
 }
 
-#graph {
-	width:90%;
-}
-
-#graph2 {
-	width:90%;
-}
