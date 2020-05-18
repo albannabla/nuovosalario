@@ -18,23 +18,23 @@ def index(request):
 	purge()
 	return render(request, 'update.html')
 
-class Round(Func):
-	function = 'ROUND'
-	template = '%(function)s(%(expressions)s, 0)'
+#class Round(Func):
+#	function = 'ROUND'
+#	template = '%(function)s(%(expressions)s, 0)'
 
 class avg(TemplateView):
 	template_name = "average.html"
 	title = "Average Price per Sqm by Date"
 
 	def shops(self):
-		return Shop.objects.values('date').annotate(averageprice = Round(Avg('pricepersqm')))
+		return Shop.objects.values('date').annotate(averageprice = Avg('pricepersqm'))
 
 class Graph(TemplateView):
 	template_name = 'graph.html'
 
 	def get_context_data(self, **kwargs):
 		context = super(Graph, self).get_context_data(**kwargs)
-		data = Shop.objects.values('date').annotate(averageprice = Round(Avg('pricepersqm')))
+		data = Shop.objects.values('date').annotate(averageprice = Avg('pricepersqm'))
 		x = []
 		y = []
 		rownum = []
