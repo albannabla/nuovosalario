@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='shop',
             name='date',
-            field=models.DateField(default=1987),
+            field=models.DateField(),
         ),
     ]

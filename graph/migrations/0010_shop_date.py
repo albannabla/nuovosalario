@@ -12,8 +12,8 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name='shop',
+            model_name='Shop',
             name='date',
-            field=models.DateField(default=datetime.date.today),
+            field=models.DateField(),
         ),
     ]
