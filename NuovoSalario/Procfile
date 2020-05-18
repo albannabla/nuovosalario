@@ -1,1 +1,1 @@
-web: gunicorn ns_root.wsgi --log-file -
+web: gunicorn NuovoSalario.wsgi --log-file -
