@@ -25,12 +25,14 @@ def index(request):
 class avg(TemplateView):
 	template_name = "average.html"
 	title = "Average Price per Sqm by Date"
+	ordering = ['date']
 
 	def shops(self):
 		return Shop.objects.values('date').annotate(averageprice = Avg('pricepersqm'))
 
 class Graph(TemplateView):
 	template_name = 'graph.html'
+	ordering = ['date']
 
 	def get_context_data(self, **kwargs):
 		context = super(Graph, self).get_context_data(**kwargs)
