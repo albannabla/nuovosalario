@@ -2,7 +2,7 @@ import requests, os
 from bs4 import BeautifulSoup
 import pandas as pd
 from datetime import date
-from .models import Shop
+from graph.models import Shop
 
 # determine number of pages
 page = requests.get('https://www.immobiliare.it/Roma/vendita_immobili_commerciali/negozio_locale-Roma.html?criterio=rilevanza&pag=1&idMZona[]=10161')
