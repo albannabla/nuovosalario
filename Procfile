@@ -1,1 +1,1 @@
-web: gunicorn NuovoSalario.wsgi --log-file -
+web: gunicorn NuovoSalario.wsgi --log-file - 
