@@ -7,6 +7,6 @@ class Shop(models.Model):
 	price = models.CharField(max_length=38)
 	description = models.CharField(max_length=100)
 	area = models.CharField(max_length=32)
-	pricepersqm = models.FloatField(max_length=30)
+	pricepersqm = models.FloatField(max_length=40)
 	date = models.DateField(default=date.today)
 
