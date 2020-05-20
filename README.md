@@ -8,6 +8,6 @@ by doing this website I have learnt:
 - how to create Plotly graphs and embed them into a website, using Django
 - how to create Django ListView and TemplateView
 - how to scrape using BeautifulSoup
-- how to set up Cron Jobs in Django/Python/Heroku
+- how to set up Cron Jobs in Django/Python/Heroku using django-admin commands
 
 
